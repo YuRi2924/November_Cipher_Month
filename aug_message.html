@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AUG_MESSAGE.css">
+    <link rel="icon" href="STEM_SOC_WITH_BG_JOIN.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>UC STEM SOC</title>
+</head>
+
+<body>
+    <section class="header">
+        <nav> 
+            <ul class="left-nav">
+                <li class="first_child"><img src="UC_LOGO.png" alt=""></li>
+                <li class="second_child"><img src="integrated_school.png" alt=""></li>
+                <li class="third_child"><img src="STEM_SOC_FINAL_logo.png" alt=""></li>
+                <li class="fourth_child"><h2>University of the Cordilleras
+                    <br> STEM Society
+                </h2></li>
+            </ul>
+            <ul class="right-nav" id="right_nav_id">
+                <li class="rLinks"><a href="STEM_soc_web_preveiw.html">Home</a></li>
+                <li class="rLinks"><a href="aug_message.html">Achievemnts</a></li>
+                <li class="rLinks"><a href="aug_message.html">Archives</a></li>
+                <li class="rLinks"><a href="aug_message.html">Community</a></li>
+                <li class="rLinks"><a href="aug_message.html">Quizzes</a></li>
+                <li class="menu" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" onclick="showMenu()"/></svg></a></li>
+            </ul>
+        
+            
+        </nav>
+
+        <div class="sidebar">
+        <ul class="side_bar right-nav">
+            <li><a href="aug_message.html">Quizzes</a></li>
+            <li><a href="aug_message.html">Community</a></li>
+            <li><a href="aug_message.html">Archives</a></li>
+            <li><a href="aug_message.html">Achievemnts</a></li>
+            <li><a href="STEM_soc_web_preveiw.html">Home</a></li>
+            <li onclick="hideSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg></a>
+            </li>
+        </div>
+        </ul>
+
+        <!-- Java Script Code  -->
+        <script>
+        function showSidebar() {
+            const side_bar = document.querySelector('.side_bar');
+            side_bar.classList.add('show');
+        }
+        
+        function hideSidebar() {
+            const side_bar = document.querySelector('.side_bar');
+            side_bar.classList.remove('show');
+        }
+         </script>
+        <!-- END OF NAVIGATION BAR -->
+
+        <div class="HOME_ROW">
+            <div class="HOME_COL">
+                <img class="slide" src="AUG_MESSAGE.svg" alt="error" width="100%">
+
+            <!-- <a href="https://www.facebook.com/profile.php?id=100086652038016&mibextid=LQQJ4d">Visit us in our Facebook page.</a> -->
+        </div>
+
+
+
+        <script src="Home_Beta.js"></script>
+    </section>
+
+    <!-- SECTION 2 -->
+
+
+    <section class="footer"></section>
+</body>

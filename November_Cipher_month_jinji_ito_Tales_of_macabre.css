@@ -1,0 +1,1801 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added to ensure padding and border are included in the element's total width and height */
+  }
+
+body{
+    background-color: black;
+    background-image: url();
+
+}
+
+p{
+    color: white;
+}
+
+a{
+    color: white;
+    display: contents;
+    
+}
+
+h1{
+    color: white;
+}
+  
+  /* HEADER SECTION */
+  .header {
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-bottom: solid black 10px;
+  }
+  
+  /* Navigation bar */
+  nav {
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(100px);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1% 1%;
+    position: relative;
+    top: 60px;
+    width: 65%;
+    margin: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul.left-nav {
+    justify-content: flex-start;
+}
+
+nav ul.right-nav {
+    justify-content: flex-end;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    transition: 1s;
+    margin: 0 3px 0 3px;
+    border-radius: 40px;
+}
+
+nav a:hover{
+    color: #ffffff;
+    background-color: white;
+    border-radius: 80px ;
+    font-size: 20px;
+ 
+}
+
+nav img{
+    height: 100%;
+    padding: 0 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+nav h2{
+    height: 100%;
+    padding: 0 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.fa-bars{
+    color: rgb(0, 0, 0);
+}
+
+/* Base styling for sidebar */
+.side_bar { 
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: rgb(0 0 0 / 76%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+    transition: 1s; /* Smooth transition for transform and opacity */
+    opacity: 0; /* Start hidden */
+}
+
+/* Styling for list items in the sidebar */
+.side_bar li {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: left;
+    transition: 1s;
+    list-style: none;
+    border-bottom: solid white 2px;
+    padding: 20px;
+}
+
+/* Styling for links within the sidebar */
+.side_bar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white;
+    transition: 1s; 
+    text-decoration: none;
+}
+
+
+
+/* Show the sidebar */
+.side_bar.show {
+    transform: translateX(0); /* Move it into view */
+    opacity: 1; /* Make it visible */
+    right: 0; /* Align with the right edge */
+}
+
+/* SECTION 1 */
+.Section_One{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: white 10px solid;
+    background-image: url();
+}
+
+
+.container{
+    width: 100%;
+}
+
+.container p{
+    text-align: center;
+    font-size: 2vw;
+
+}
+
+.container h1{
+    font-size: 8vw;
+    text-align: center;
+    line-height:0.9;
+}
+
+
+/* END OF SECTION 1 */
+
+/* SECTION 2 */
+.Section_two{
+    width: 100%;
+    height: max-content;
+    border-bottom: white 10px solid;
+    padding: 5%;
+    margin-top: 10%;
+}
+
+
+
+.About_Tales_of_Macabre{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.About_Tales_of_Macabre h1{
+    font-size: 5rem;
+    text-align: center;
+}
+
+.About_Tales_of_Macabre p{
+    font-size: 100%;
+    text-align: center;
+    padding: 3%;
+    
+}
+
+#video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* or specify a fixed width */
+    margin-bottom: 3%;
+}
+
+.video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the video thumbnail fits within its container */
+    border: none;
+    
+
+}
+
+.BACK_BUTTON{
+    display: inline-block;
+    width: 50%;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: solid white 2px;
+    text-align: center;
+    margin: auto;
+    transition: 1s;
+}
+
+.BACK_BUTTON:hover{
+    color: black;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 1.25%;
+}
+
+
+
+
+
+
+
+/* SECTION_3 */
+
+.section_three{
+    width: 100%;
+}
+
+.section_three_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  
+}
+
+.section_three_container img{
+    flex-shrink: 20px
+    ;
+    width: 5%;
+    object-fit: fill;
+}
+
+.footer_section{
+    width: 100%;
+   
+}
+.footer_container{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+
+@media only screen and (max-width: 320px){
+    body{
+        background-color: black;
+        background-image: url();
+    
+    }
+    
+    p{
+        color: white;
+        font-size: 3vw;
+    }
+    
+    a{
+        color: white;
+        
+    }
+    
+    h1{
+        color: white;
+    }
+      
+      /* HEADER SECTION */
+      .header {
+        min-height: 50vh;
+        width: 100%;
+        background-color: white;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-bottom: solid black 10px;
+      }
+      
+    /* Navigation bar */
+      nav {
+        background-color: rgb(255, 255, 255);
+        backdrop-filter: blur(100px);
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 1% 1%;
+        position: relative;
+        top: 20px;
+        width: 90%;
+        margin: auto;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul.left-nav {
+        justify-content: flex-start;
+    }
+    
+    nav ul.right-nav {
+        justify-content: flex-end;
+    }
+    
+    nav li {
+        height: 50px;
+    }
+    
+    nav a{
+        height: 100%;
+        padding: 0 20px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+        transition: 1s;
+        margin: 0 3px 0 3px;
+        border-radius: 40px;
+    }
+    
+    nav a:hover{
+        color: #ffffff;
+        background-color: white;
+        border-radius: 80px ;
+        font-size: 20px;
+     
+    }
+    
+    nav img{
+        height: 100%;
+        padding: 0 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+    }
+    
+    nav h2{
+        height: 100%;
+        padding: 0 8px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        line-height: 1;
+    }
+    
+    .fa-bars{
+        color: rgb(0, 0, 0);
+    }
+    
+    /* Base styling for sidebar */
+    .side_bar { 
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        height: 100vh;
+        width: 100%;
+        z-index: 999;
+        background-color: rgb(0 0 0 / 76%);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 20px;
+        transition: 1s; /* Smooth transition for transform and opacity */
+        opacity: 0; /* Start hidden */
+    }
+    
+    /* Styling for list items in the sidebar */
+    .side_bar li {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-align: left; /* Center align text and images */
+        transition: 1s; 
+        list-style: none;
+    }
+    
+    /* Styling for links within the sidebar */
+    .side_bar a {
+        text-decoration: none; /* Remove underline from links */
+        color: white;
+        transition: 1s; 
+        text-decoration: none;
+    }
+    
+    /* Show the sidebar */
+    .side_bar.show {
+        transform: translateX(0); /* Move it into view */
+        opacity: 1; /* Make it visible */
+        right: 0; /* Align with the right edge */
+    }
+    /* END SIDE BAR */
+
+
+
+    /* SECTION 1 */
+.Section_One{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: white 3px solid;
+    background-image: url();
+}
+
+
+.container{
+    width: 100%;
+}
+
+.container p{
+    text-align: center;
+    font-size: 2vw;
+
+}
+
+.container h1{
+    font-size: 8vw;
+    text-align: center;
+    line-height:0.9;
+    margin: 0px 20px 0 20px;
+}
+/* END OF SECTION 1 */
+
+/* SECTION 2 */
+.Section_two{
+    width: 100%;
+    height: max-content;
+    border-bottom: white 3px solid;
+    padding: 5%;
+}
+
+
+
+.About_Tales_of_Macabre{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10%;
+}
+
+
+.About_Tales_of_Macabre h1{
+    font-size: 6vw;
+    text-align: center;
+}
+
+.About_Tales_of_Macabre p{
+    font-size: 100%;
+    text-align: justify;
+    padding: 3%;
+    margin-bottom: 3%;
+}
+
+#video{
+    margin-bottom: 5%;
+}
+iframe{
+    position: relative;
+    width: 100%; /* or specify a fixed width */
+    padding-top: 0%; 
+}
+
+.BACK_BUTTON{
+    display: inline-block;
+    width: 50%;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: solid white 2px;
+    text-align: center;
+    margin: auto;
+    transition: 1s;
+}
+
+.BACK_BUTTON:hover{
+    display: inline-block;
+    width: 50%;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: solid white 2px;
+    text-align: center;
+    margin: auto;
+    transition: 1s;
+}
+
+
+
+
+
+
+
+/* SECTION_3 */
+
+.section_three{
+    width: 100%;
+}
+
+.section_three_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  
+}
+
+.section_three_container img{
+    flex-shrink: 20px;
+    width: 15%;
+    object-fit: fill;
+}
+
+    .footer_section{
+        width: 100%;
+       
+    }
+    .footer_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+}
+@media only screen and (min-width: 375px) and (max-width: 425px){
+    body{
+        background-color: black;
+        background-image: url();
+    
+    }
+    
+    p{
+        color: white;
+        font-size: 3vw;
+    }
+    
+    a{
+        color: white;
+        
+    }
+    
+    h1{
+        color: white;
+    }
+      
+      /* HEADER SECTION */
+      .header {
+        min-height: 50vh;
+        width: 100%;
+        background-color: white;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-bottom: solid black 10px;
+      }
+      
+    /* Navigation bar */
+      nav {
+        background-color: rgb(255, 255, 255);
+        backdrop-filter: blur(100px);
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 1% 1%;
+        position: relative;
+        top: 20px;
+        width: 90%;
+        margin: auto;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul.left-nav {
+        justify-content: flex-start;
+    }
+    
+    nav ul.right-nav {
+        justify-content: flex-end;
+    }
+    
+    nav li {
+        height: 50px;
+    }
+    
+    nav a{
+        height: 100%;
+        padding: 0 20px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+        transition: 1s;
+        margin: 0 3px 0 3px;
+        border-radius: 40px;
+    }
+    
+    nav a:hover{
+        color: #ffffff;
+        background-color: white;
+        border-radius: 80px ;
+        font-size: 20px;
+     
+    }
+    
+    nav img{
+        height: 100%;
+        padding: 0 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+    }
+    
+    nav h2{
+        height: 100%;
+        padding: 0 8px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        line-height: 1;
+    }
+    
+    .fa-bars{
+        color: rgb(0, 0, 0);
+    }
+    
+    /* Base styling for sidebar */
+    .side_bar { 
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        height: 100vh;
+        width: 100%;
+        z-index: 999;
+        background-color: rgb(0 0 0 / 76%);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 20px;
+        transition: 1s; /* Smooth transition for transform and opacity */
+        opacity: 0; /* Start hidden */
+    }
+    
+    /* Styling for list items in the sidebar */
+    .side_bar li {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-align: left; /* Center align text and images */
+        transition: 1s; 
+        list-style: none;
+    }
+    
+    /* Styling for links within the sidebar */
+    .side_bar a {
+        text-decoration: none; /* Remove underline from links */
+        color: white;
+        transition: 1s; 
+        text-decoration: none;
+    }
+    
+    /* Show the sidebar */
+    .side_bar.show {
+        transform: translateX(0); /* Move it into view */
+        opacity: 1; /* Make it visible */
+        right: 0; /* Align with the right edge */
+    }
+    /* END SIDE BAR */
+
+
+
+    /* SECTION 1 */
+.Section_One{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: white 3px solid;
+    background-image: url();
+}
+
+
+.container{
+    width: 100%;
+}
+
+.container p{
+    text-align: center;
+    font-size: 2vw;
+
+}
+
+.container h1{
+    font-size: 8vw;
+    text-align: center;
+    line-height:0.9;
+    margin: 0px 20px 0 20px;
+}
+/* END OF SECTION 1 */
+
+/* SECTION 2 */
+.Section_two{
+    width: 100%;
+    height: max-content;
+    border-bottom: white 3px solid;
+    padding: 5%;
+}
+
+
+
+.About_Tales_of_Macabre{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.About_Tales_of_Macabre h1{
+    font-size: 6vw;
+    text-align: center;
+}
+
+.About_Tales_of_Macabre p{
+    font-size: 100%;
+    text-align: justify;
+    padding: 3%;
+    margin-bottom: 3%;
+    
+}
+#video{
+    margin-bottom: 3%;
+}
+iframe{
+    position: relative;
+    width: 100%; /* or specify a fixed width */
+    padding-top: 0%; 
+}
+
+.BACK_BUTTON{
+    display: inline-block;
+    width: 50%;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: solid white 2px;
+    text-align: center;
+    margin: auto;
+    transition: 1s;
+}
+
+
+
+
+
+
+/* SECTION_3 */
+
+.section_three{
+    width: 100%;
+}
+
+.section_three_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  
+}
+
+.section_three_container img{
+    flex-shrink: 20px;
+    width: 15%;
+    object-fit: fill;
+}
+
+    .footer_section{
+        width: 100%;
+       
+    }
+    .footer_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+}
+    
+      
+@media only screen and (min-width: 425px) and (max-width: 768px){
+    body{
+        background-color: black;
+        background-image: url();
+    
+    }
+    
+    p{
+        color: white;
+        font-size: 3vw;
+    }
+    
+    a{
+        color: white;
+        
+    }
+    
+    h1{
+        color: white;
+    }
+      
+      /* HEADER SECTION */
+      .header {
+        min-height: 50vh;
+        width: 100%;
+        background-color: white;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-bottom: solid black 10px;
+      }
+      
+    /* Navigation bar */
+      nav {
+        background-color: rgb(255, 255, 255);
+        backdrop-filter: blur(100px);
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 1% 1%;
+        position: relative;
+        top: 20px;
+        width: 90%;
+        margin: auto;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul.left-nav {
+        justify-content: flex-start;
+    }
+    
+    nav ul.right-nav {
+        justify-content: flex-end;
+    }
+    
+    nav li {
+        height: 50px;
+    }
+    
+    nav a{
+        height: 100%;
+        padding: 0 20px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+        transition: 1s;
+        margin: 0 3px 0 3px;
+        border-radius: 40px;
+    }
+    
+    nav a:hover{
+        color: #ffffff;
+        background-color: white;
+        border-radius: 80px ;
+        font-size: 20px;
+     
+    }
+    
+    nav img{
+        height: 100%;
+        padding: 0 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+    }
+    
+    nav h2{
+        height: 100%;
+        padding: 0 8px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        line-height: 1;
+    }
+    
+    .fa-bars{
+        color: rgb(0, 0, 0);
+    }
+    
+    /* Base styling for sidebar */
+    .side_bar { 
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        height: 100vh;
+        width: 100%;
+        z-index: 999;
+        background-color: rgb(0 0 0 / 76%);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 20px;
+        transition: 1s; /* Smooth transition for transform and opacity */
+        opacity: 0; /* Start hidden */
+    }
+    
+    /* Styling for list items in the sidebar */
+    .side_bar li {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-align: left; /* Center align text and images */
+        transition: 1s; 
+        list-style: none;
+    }
+    
+    /* Styling for links within the sidebar */
+    .side_bar a {
+        text-decoration: none; /* Remove underline from links */
+        color: white;
+        transition: 1s; 
+        text-decoration: none;
+    }
+    
+    /* Show the sidebar */
+    .side_bar.show {
+        transform: translateX(0); /* Move it into view */
+        opacity: 1; /* Make it visible */
+        right: 0; /* Align with the right edge */
+    }
+    /* END SIDE BAR */
+
+
+
+    /* SECTION 1 */
+.Section_One{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: white 3px solid;
+    background-image: url();
+}
+
+
+.container{
+    width: 100%;
+}
+
+.container p{
+    text-align: center;
+    font-size: 2vw;
+
+}
+
+.container h1{
+    font-size: 8vw;
+    text-align: center;
+    line-height:0.9;
+    margin: 0px 20px 0 20px;
+}
+/* END OF SECTION 1 */
+
+/* SECTION 2 */
+.Section_two{
+    width: 100%;
+    height: max-content;
+    border-bottom: white 3px solid;
+    padding: 5%;
+}
+
+
+
+.About_Tales_of_Macabre{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.About_Tales_of_Macabre h1{
+    font-size: 6vw;
+    text-align: center;
+}
+
+.About_Tales_of_Macabre p{
+    font-size: 100%;
+    text-align: justify;
+    padding: 3%;
+    margin-bottom: 3%;
+    
+}
+#video{
+    margin-bottom: 3%;
+}
+iframe{
+    position: relative;
+    width: 100%; /* or specify a fixed width */
+    padding-top: 0%; 
+}
+
+.BACK_BUTTON{
+    display: inline-block;
+    width: 50%;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: solid white 2px;
+    text-align: center;
+    margin: auto;
+    transition: 1s;
+}
+
+
+
+
+
+
+/* SECTION_3 */
+
+.section_three{
+    width: 100%;
+}
+
+.section_three_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  
+}
+
+.section_three_container img{
+    flex-shrink: 20px;
+    width: 15%;
+    object-fit: fill;
+}
+
+    .footer_section{
+        width: 100%;
+       
+    }
+    .footer_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+}   
+@media only screen and (min-width: 768px) and (max-width: 992px) {  
+    
+body{
+    background-color: black;
+    background-image: url();
+
+}
+
+p{
+    color: white;
+    font-size: 3vw;
+}
+
+a{
+    color: white;
+    
+}
+
+h1{
+    color: white;
+}
+  
+  /* HEADER SECTION */
+  .header {
+    min-height: 50vh;
+    width: 100%;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-bottom: solid black 10px;
+  }
+  
+  /* Navigation bar */
+  nav {
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(100px);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1% 1%;
+    position: relative;
+    top: 60px;
+    width: 90%;
+    margin: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul.left-nav {
+    justify-content: flex-start;
+}
+
+nav ul.right-nav {
+    justify-content: flex-end;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    transition: 1s;
+    margin: 0 3px 0 3px;
+    border-radius: 40px;
+}
+
+nav a:hover{
+    color: #ffffff;
+    background-color: white;
+    border-radius: 80px ;
+    font-size: 20px;
+ 
+}
+
+nav img{
+    height: 100%;
+    padding: 0 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+nav h2{
+    height: 100%;
+    padding: 0 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.fa-bars{
+    color: rgb(0, 0, 0);
+}
+
+/* Base styling for sidebar */
+.side_bar { 
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: rgb(0 0 0 / 76%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+    transition: 1s; /* Smooth transition for transform and opacity */
+    opacity: 0; /* Start hidden */
+}
+
+/* Styling for list items in the sidebar */
+.side_bar li {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: left; /* Center align text and images */
+    transition: 1s; 
+    list-style: none;
+}
+
+/* Styling for links within the sidebar */
+.side_bar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white;
+    transition: 1s; 
+    text-decoration: none;
+}
+
+/* Show the sidebar */
+.side_bar.show {
+    transform: translateX(0); /* Move it into view */
+    opacity: 1; /* Make it visible */
+    right: 0; /* Align with the right edge */
+}
+
+/* SECTION 1 */
+.Section_One{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: white 10px solid;
+    background-image: url();
+}
+
+.container p{
+    text-align: center;
+    font-size: 3vw;
+}
+
+.container h1{
+    font-size: 11vw;
+    text-align: center;
+    line-height:0.9;
+}
+
+/* SECTION 2 */
+.Section_two{
+    width: 100%;
+    border-bottom: white 10px solid;
+    padding: 5%;
+}
+
+.Game_mechanics_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    margin: auto;
+}
+
+.row{
+    width: 100%;
+    padding: 2%;
+}
+
+.down{
+    width: 50%;
+}
+.row img{
+    width: 100%;
+    margin: auto;
+    border-radius: 30px;
+   
+}
+
+.row h1{
+    font-size: 6vw;
+    text-align: left;
+}
+
+.row p{
+    font-size: 100%;
+    width: 100%;
+    letter-spacing: 0px;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+
+.row ul{
+    font-size: 80%;
+    margin-top: 10px;
+}
+.row li{
+    color: azure;
+    padding-left: 5px;
+    padding-top: 3px;
+    margin-left: 10px;
+}
+
+.row a{
+    display: inline;
+    text-decoration:underline;
+    margin: auto;
+    padding: 0px;
+    background-color: black;
+    color: rgb(255, 249, 249);
+    border-radius: 10px;
+}
+
+#MESSAGE{
+    font-size: 4vw;
+    line-height: 0.9;
+}
+
+/* SECTION_3 */
+
+.section_three{
+    width: 100%;
+}
+
+.section_three_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  
+}
+
+.section_three_container img{
+    flex-shrink: 20px
+    ;
+    width: 5%;
+    object-fit: fill;
+}
+
+.footer_section{
+    width: 100%;
+   
+}
+.footer_container{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.footer_container p{
+    font-size: 100%;
+
+}
+
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1024px){
+    body{
+        background-color: black;
+        background-image: url();
+    
+    }
+    
+    p{
+        color: white;
+        font-size: 3vw;
+    }
+    
+    a{
+        color: white;
+        
+    }
+    
+    h1{
+        color: white;
+    }
+      
+      /* HEADER SECTION */
+      .header {
+        min-height: 50vh;
+        width: 100%;
+        background-color: white;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-bottom: solid black 10px;
+      }
+      
+      /* Navigation bar */
+      nav {
+        background-color: rgb(255, 255, 255);
+        backdrop-filter: blur(100px);
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 1% 1%;
+        position: relative;
+        top: 60px;
+        width: 90%;
+        margin: auto;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul.left-nav {
+        justify-content: flex-start;
+    }
+    
+    nav ul.right-nav {
+        justify-content: flex-end;
+    }
+    
+    nav li {
+        height: 50px;
+    }
+    
+    nav a{
+        height: 100%;
+        padding: 0 20px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+        transition: 1s;
+        margin: 0 3px 0 3px;
+        border-radius: 40px;
+    }
+    
+    nav a:hover{
+        color: #ffffff;
+        background-color: white;
+        border-radius: 80px ;
+        font-size: 20px;
+     
+    }
+    
+    nav img{
+        height: 100%;
+        padding: 0 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+    }
+    
+    nav h2{
+        height: 100%;
+        padding: 0 8px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        line-height: 1;
+    }
+    
+    .fa-bars{
+        color: rgb(0, 0, 0);
+    }
+    
+    /* Base styling for sidebar */
+    .side_bar { 
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        height: 100vh;
+        width: 100%;
+        z-index: 999;
+        background-color: rgb(0 0 0 / 76%);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 20px;
+        transition: 1s; /* Smooth transition for transform and opacity */
+        opacity: 0; /* Start hidden */
+    }
+    
+    /* Styling for list items in the sidebar */
+    .side_bar li {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-align: left; /* Center align text and images */
+        transition: 1s; 
+        list-style: none;
+    }
+    
+    /* Styling for links within the sidebar */
+    .side_bar a {
+        text-decoration: none; /* Remove underline from links */
+        color: white;
+        transition: 1s; 
+        text-decoration: none;
+    }
+    
+    /* Show the sidebar */
+    .side_bar.show {
+        transform: translateX(0); /* Move it into view */
+        opacity: 1; /* Make it visible */
+        right: 0; /* Align with the right edge */
+    }
+    
+    /* SECTION 1 */
+    .Section_One{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: white 10px solid;
+        background-image: url();
+    }
+    
+    .container p{
+        text-align: center;
+        font-size: 3vw;
+    }
+    
+    .container h1{
+        font-size: 11vw;
+        text-align: center;
+        line-height:0.9;
+    }
+    
+    /* SECTION 2 */
+    .Section_two{
+        width: 100%;
+        border-bottom: white 10px solid;
+        padding: 5%;
+    }
+    
+    .Game_mechanics_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 100%;
+        margin: auto;
+    }
+    
+    .row{
+        width: 100%;
+        padding: 2%;
+    }
+    
+    .down{
+        width: 50%;
+    }
+    .row img{
+        width: 100%;
+        margin: auto;
+        border-radius: 30px;
+       
+    }
+    
+    .row h1{
+        font-size: 6vw;
+        text-align: left;
+    }
+    
+    .row p{
+        font-size: 100%;
+        width: 100%;
+        letter-spacing: 0px;
+        text-align: justify;
+        margin-top: 10px;
+    }
+    
+    
+    .row ul{
+        font-size: 80%;
+        margin-top: 10px;
+    }
+    .row li{
+        color: azure;
+        padding-left: 5px;
+        padding-top: 3px;
+        margin-left: 10px;
+    }
+    
+    .row a{
+        display: inline;
+        text-decoration:underline;
+        margin: auto;
+        padding: 0px;
+        background-color: black;
+        color: rgb(255, 249, 249);
+        border-radius: 10px;
+    }
+    
+    #MESSAGE{
+        font-size: 4vw;
+        line-height: 0.9;
+    }
+    
+    /* SECTION_3 */
+    
+    .section_three{
+        width: 100%;
+    }
+    
+    .section_three_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      
+    }
+    
+    .section_three_container img{
+        flex-shrink: 20px
+        ;
+        width: 5%;
+        object-fit: fill;
+    }
+    
+    .footer_section{
+        width: 100%;
+       
+    }
+    .footer_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    }
+
+    .footer_container p{
+        font-size: 100%;
+    }
+}
+
+/* TO AVOID WIDTH SLIDING  */
+@media only screen and (max-width:1315px)
+{
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+/* TO AVOID WIDTH SLIDING  */
+
+@media only screen and (max-width:1024px)
+{
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width:2560px)
+{
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+/* TO AVOID WIDTH SLIDING  */
+
+
+
+
+

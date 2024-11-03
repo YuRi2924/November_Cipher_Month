@@ -1,0 +1,3167 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added to ensure padding and border are included in the element's total width and height */
+  }
+
+body{
+    background-color: #80292b;
+
+}
+  
+  /* HEADER SECTION */
+  .header {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #81a683;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-bottom: solid black 10px;
+  }
+  
+  /* Navigation bar */
+  nav {
+    background-color: #556e57;
+    backdrop-filter: blur(50px);
+    border-radius: 30px;
+    /* border: 2px rgb(255, 255, 255) solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1% 1%;
+    position: relative;
+    top: 10px;
+    width: 95%;
+    margin: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul.left-nav {
+    justify-content: flex-start;
+}
+
+nav ul.right-nav {
+    justify-content: flex-end;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    transition: 1s;
+    margin: 0 3px 0 3px;
+    border-radius: 40px;
+}
+
+nav a:hover{
+    color: #253728;
+    background-color: white;
+    border-radius: 80px ;
+    font-size: 20px;
+ 
+}
+
+nav img{
+    height: 100%;
+    padding: 0 2px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+nav h2{
+    height: 100%;
+    padding: 0 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.fa-bars{
+    color: white;
+}
+
+/* Base styling for sidebar */
+.side_bar { 
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start off-screen */
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(56, 91, 52, 0.447);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+    transition: 1s; /* Smooth transition for transform and opacity */
+    opacity: 0; /* Start hidden */
+}
+
+/* Styling for list items in the sidebar */
+.side_bar li {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin-bottom: 20px; /* Add margin for spacing between items */
+    text-align: left; /* Center align text and images */
+    transition: 1s; 
+    list-style: none;
+}
+
+/* Styling for links within the sidebar */
+.side_bar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white;
+    transition: 1s; 
+    text-decoration: none;
+}
+
+/* Show the sidebar */
+.side_bar.show {
+    transform: translateX(0); /* Move it into view */
+    opacity: 1; /* Make it visible */
+    right: 0; /* Align with the right edge */
+}
+
+/* CONTENT 1 */
+.HOME_ROW{
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.HOME_COL{
+    padding: 0px;
+    margin: auto;
+    flex-basis: 50%;
+}
+
+
+
+.HOME_COL h1{
+    color: #253728;
+    padding: 15px 0 0;
+    font-size: 4rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;;
+    line-height: 1;
+
+}
+
+.HOME_COL p{
+    color: #253728;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    padding-right: 15%;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.HOME_COL a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    background-color: #253728;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    transition: 1s;
+}
+
+.HOME_COL a:hover{
+    border-radius: 20px;
+    padding: 15px;
+   
+
+}
+
+.image_HOME {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.image_HOME img {
+    width: 100%;
+    display:none;
+    border-radius:10px ;
+
+}
+
+img.displaySlide{
+    display: block;
+}
+
+/* Style for the active slide */
+.slide.active {
+    opacity: 1;
+}
+
+/* Button styling */
+.hButtons{
+    background-color: #25372820; /* Semi-transparent white */
+    border: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+/* Positioning the buttons within the image */
+.prev:first-of-type {
+    left: 10px; /* Left arrow */
+}
+
+.next:last-of-type {
+    right: 10px; /* Right arrow */
+}
+
+/* Hover effect */
+.prev:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+.next:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+/* SECTION 2 */
+.STEM{
+    width: 100%;
+    margin: auto;
+    background-color: #7a3f3f;
+    padding: 3%;
+    border-bottom: #000000 solid 6px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.STEM_CONTAINER{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.STEM_CONTAINER_PARENT{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    margin: auto;
+   
+}
+
+.STEM_CHILDREN_ROW{
+    margin: auto;
+    padding: 10px;
+    flex-basis: 50%;
+}
+.STEM_CHILDREN_ROW img{
+    width: 90%;
+   
+}
+
+
+
+.STEM_CHILDREN_ROW h2{
+    color: #e9f5db;
+    padding: 15px 0 0 15px;
+    font-size: 6rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;;
+    line-height: 1;
+}
+
+.STEM_TEXT{
+    color: #e9f5db;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    padding: 5px 0px 15px 15px;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* SCIENCE */
+.card{
+    background-color: antiquewhite;
+    margin: 15px;
+    padding: 3%;
+    font-size: 3rem;
+    border-radius: 40px;
+    border: #000000 solid 2px;
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.card:hover{
+    padding: 5%;
+    border-radius: 45px ;
+    background-color: #fd8181;
+}
+
+.card:hover .card_body{
+    top: 0;
+    padding: 4%;
+
+}
+
+.card_body{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    top:-100%;
+    right: 0%;
+    position:absolute;
+    background: #fd8181;
+    backdrop-filter: blur(5px) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    transition: 2s;
+    padding: 0%;
+}
+
+/* SCIENCE */
+
+/* TECHNOLOGHY */
+.tech_card{
+    background-color: antiquewhite;
+    margin: 15px;
+    padding: 3%;
+    font-size: 3rem;
+    border-radius: 40px;
+    border: #000000 solid 2px;
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.tech_card:hover{
+    padding: 5%;
+    border-radius: 45px ;
+    background-color:#f5c33e;
+}
+
+.tech_card:hover .card_body_tech{
+    top: 0;
+    padding: 4%;
+}
+
+.card_body_tech{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    top:-100%;
+    right: 0%;
+    position:absolute;
+    background: #f5c43e;
+    backdrop-filter: blur(5px) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    transition: 2s;
+    padding: 0%;
+
+}
+/* TECHNOLOGHY */
+
+/* ENGINEER */
+.engi_card{
+    background-color: antiquewhite;
+    margin: 15px;
+    padding: 3%;
+    font-size: 3rem;
+    border-radius: 40px;
+    border: #000000 solid 2px;
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.engi_card:hover{
+    padding: 5%;
+    border-radius: 45px ;
+    background-color:#ecae6f;
+}
+
+.engi_card:hover .card_body_engi{
+    top: 0;
+    padding: 4%;
+}
+
+.card_body_engi{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    top:-100%;
+    right: 0%;
+    position:absolute;
+    background: #ecae6f;
+    backdrop-filter: blur(5px) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    transition: 2s;
+    padding: 0%;
+
+}
+/* ENGINEER */
+
+
+/* MATHEMATICS */
+.math_card{
+    background-color: antiquewhite;
+    margin: 15px;
+    padding: 3%;
+    font-size: 3rem;
+    border-radius: 40px;
+    border: #000000 solid 2px;
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.math_card:hover{
+    padding: 5%;
+    border-radius: 45px ;
+    background-color:#8a93f8;
+}
+
+.math_card:hover .card_body_math{
+    top: 0;
+    padding: 4%;
+}
+
+.card_body_math{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    top:-100%;
+    right: 0%;
+    position:absolute;
+    background: #8a93f8;
+    backdrop-filter: blur(5px) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    transition: 2s;
+    padding: 0%;
+
+}
+/* MATHEMATICS */
+
+.card_title{
+    font-size: 30px;  
+    padding-left: 3%;
+}
+
+#card_info{
+    font-size: 15px;
+    font: black;
+    padding-left: 3%;
+}
+
+
+
+
+/* @keyframes appear{
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.block{
+    animation: appear  linear;
+    animation-timeline: view() ;
+    animation-range: entry 50% cover 10% ;
+} */
+
+/* STEM SOCIETY SECTION */
+
+.STEM_SOCIETY{
+    width: 100%;
+    margin: auto;
+    background-color: #81a683; 
+    border-bottom: #000000 solid 10px;
+}
+
+.STEM_SOCIETY_CONTAINER{
+    width: 90%;
+    margin: auto;
+    padding: 3%;
+   
+}
+
+.STEM_SOCIETY_PARENT{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+    
+}
+
+.STEM_SOCIETY_ROW{
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    flex-basis: 50%;
+  
+}
+
+.STEM_SOCIETY_ROW img{
+    width: 100%;  
+    border-radius: 20px;
+}
+
+.STEM_SOCIETY_ROW h2{
+    color: #253728;
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;;
+    line-height: 1;
+    margin-top: 5%;
+}
+.STEM_SOCIETY_ROW p{
+        color: #253728;
+        margin-top: 20px;
+        line-height: 1.5;
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+}
+
+.about{
+    width: 100%;
+    margin: auto;
+    background-color: #81a683; 
+    padding: 3%;
+    border-bottom:solid black 10px;
+    position: relative;
+}
+
+.About_Container{
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+
+.About_Parent{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.About_Row{
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+}
+.About_Row img{
+    width: 100%;  
+    margin-top:10%;
+    border-radius: 20px;
+    margin-left: 5%;
+
+}
+
+.About_Row h2{
+    color: #253728;
+    font-size: 5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;;
+    line-height: 1;
+    margin-top: 10%;
+}
+
+.About_Row p{
+    color: #253728;
+    margin-top: 20px;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.about_cards_container{
+    width: 80%;
+    margin: auto;
+}
+
+.about_cards_parent{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    width: 100%;
+}
+
+.about_cards_children{
+    width:  50%;
+    margin: 10px;
+    background-color: aliceblue;
+}
+
+/* features */
+.FEATURES_STEM{
+    width: 100%;
+    margin: auto;
+    background-color: #81a683;
+    padding: 3%;
+    border-bottom: #000000 solid 6px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.FEATURES_STEM_CONTAINER{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.FEATURES_STEM_CONTAINER_PARENT{
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    margin: auto;
+}
+.FEATURES_STEM_CHILDREN_ROW{
+    margin: auto;
+    padding: 10px;
+    flex-basis: 50%;
+}
+
+.FEATURES_STEM_CHILDREN_ROW h2{
+    color: #253728;
+    padding: 15px 0 0 15px;
+    font-size: 6rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;;
+    line-height: 1;
+
+}
+
+.pFeatures{
+    color: #253728;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    padding: 5px 0px 15px 15px;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal; 
+}
+
+.text_features{
+    background-color: antiquewhite;
+    margin: 15px;
+    padding: 3%;
+    font-size: 3rem;
+    border-radius: 40px;
+    border: #000000 solid 2px;
+    transition: 1s;
+}
+
+#SCIENCE:hover{
+    background-color:#fd8181;
+    padding: 5%;
+}
+
+#TECHNOLOGHY:hover{
+    background-color:#f5c33e;
+    padding: 5%;
+}
+#ENGINEERING:hover{
+    background-color:#ecae6f;
+    padding: 5%;
+}
+
+#MATHEMATHICS:hover{
+    background-color:#8a93f8;
+    padding: 5%;
+}
+
+
+.footer{
+    width: 100%;
+    padding: 20px;
+    background: #7a3f3f;
+}
+
+
+.menu{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+/* ____________________________________________________________________________________________________________ */
+
+@media only screen and (max-width: 320px){
+
+    .header {
+        min-height: 100vh;
+        width: 100%;
+        background-color: #81a683;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-bottom: solid black 10px;
+      }
+    
+    /* NAVIGATION BAR */
+    .menu{
+        display: flex;
+    }
+
+    .menu:hover{
+        background-color: #556e57;
+        border-radius: 100%;
+    }
+    
+    .rLinks{
+        display: none;
+    }
+    .first_child{
+        display: none;
+    }
+    .second_child{
+        display: none;
+    }
+
+    nav h2{
+        font-size: 2vmax;
+    }
+
+    /* NAVIGATION BAR */
+
+    .HOME_ROW{
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-basis: 50%;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .HOME_COL{
+        padding: 0px;
+        margin: auto;
+        flex-basis: 50%;
+    }
+    
+    
+    
+    .HOME_COL h1{
+        color: #253728;
+        padding: 15px 0 0;
+        font-size: 13vw;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .HOME_COL p{
+        line-height: 1.5;
+        font-size: 80%;
+        margin-bottom: 10px;
+        padding-right: 0%;
+        text-align: center;
+    }
+    
+    .HOME_COL a{
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 3vw;
+        transition: 1s;
+        text-align: center;
+        display: flow;
+    }
+    
+    .HOME_COL a:hover{
+        border-radius: 10px;
+        padding: 15px;
+    }
+    
+    .image_HOME {
+       display: flex;
+    }
+    /* Button styling */
+.hButtons{
+    background-color: #25372820; /* Semi-transparent white */
+    border: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+/* Positioning the buttons within the image */
+.prev:first-of-type {
+    left: 10px; /* Left arrow */
+}
+
+.next:last-of-type {
+    right: 10px; /* Right arrow */
+}
+
+/* Hover effect */
+.prev:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+.next:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+
+    /* SECTION 2 */
+    .STEM{
+        width: 100%;
+        background-color: #7a3f3f;
+        border-bottom: #000000 solid 6px;
+        min-height: 100vh;
+        position: relative;    
+    }
+    
+    .STEM_CONTAINER{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 3%;
+        margin: auto;
+    }
+    
+    .STEM_CONTAINER_PARENT{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .STEM_CHILDREN_ROW{
+        width: 100%;
+        padding: 0px;
+        flex-basis: 50%;
+    }
+
+    
+    
+    .STEM_CHILDREN_ROW h2{
+        color: #e9f5db;
+        padding: 15px 0 0 0;
+        font-size: 38px;
+        text-align: center;
+    }
+    
+    .STEM_TEXT{
+        margin-bottom: 0px;
+        padding: 5px 0px 0px 0px;
+        font-size: 77%;
+        text-align: center;
+    }
+    
+    /* SCIENCE */
+    .card{
+        font-size: 7vw;
+        border-radius: 30px;   
+        padding: 7%;
+        text-align: center;
+    }
+    
+    .card:hover{
+        padding:10%;
+        border-radius: 35px ;
+    }
+    
+    .card:hover .card_body{
+        top: 0;
+        padding: 4%;
+    
+    }
+    
+    .card_body{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #fd8181;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    }
+    
+    /* SCIENCE */
+    
+    /* TECHNOLOGHY */
+    .tech_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 7%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .tech_card:hover{
+        padding: 10%;
+        border-radius: 45px ;
+        background-color:#f5c33e;
+    }
+    
+    .tech_card:hover .card_body_tech{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_tech{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #f5c43e;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* TECHNOLOGHY */
+    
+    /* ENGINEER */
+    .engi_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 7%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .engi_card:hover{
+        padding: 10%;
+        border-radius: 45px ;
+        background-color:#ecae6f;
+    }
+    
+    .engi_card:hover .card_body_engi{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_engi{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #ecae6f;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* ENGINEER */
+    
+    
+    /* MATHEMATICS */
+    .math_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 8%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .math_card:hover{
+        padding: 10%;
+        border-radius: 45px ;
+        background-color:#8a93f8;
+    }
+    
+    .math_card:hover .card_body_math{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_math{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #8a93f8;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* MATHEMATICS */
+    
+    .card_title{
+        font-size: 15px;  
+        padding-left: 0%;
+        
+    }
+    
+    #card_info{
+        font-size: 10px;
+        font: black;
+        padding-left: 0%;
+    }
+    /* STEM SOCIETY SECTION */
+    
+    /* features */
+    .FEATURES_STEM{
+        width: 100%;
+        margin: auto;
+        background-color: #81a683;
+        padding: 3%;
+        border-bottom: #000000 solid 6px;
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    .FEATURES_STEM_CONTAINER{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    
+    .FEATURES_STEM_CONTAINER_PARENT{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .FEATURES_STEM_CHILDREN_ROW{
+        width: 100%;
+        padding: 10px;
+        flex-basis: 50%;
+    }
+    
+    .FEATURES_STEM_CHILDREN_ROW h2{
+        color: #253728;
+        padding: 15px 0 0 15px;
+        font-size: 43px;
+        text-align: center;
+    }
+    
+    .pFeatures{
+        color: #253728;
+        margin-bottom: 0px;
+        line-height: 1.2;
+        padding: 5px 0px 0px 15px;
+        font-size: 80%;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal; 
+        text-align: center;
+    }
+    
+    .text_features{
+        background-color: antiquewhite;
+        margin: 0px 0px 10px 0px;
+        padding: 7%;
+        font-size: 10vw;
+        border-radius: 40px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        text-align: center;
+        
+    }
+    
+    #SCIENCE:hover{
+        background-color:#fd8181;
+        padding: 5%;
+    }
+    
+    #TECHNOLOGHY:hover{
+        background-color:#f5c33e;
+        padding: 5%;
+    }
+    #ENGINEERING:hover{
+        background-color:#ecae6f;
+        padding: 5%;
+    }
+    
+    #MATHEMATHICS:hover{
+        background-color:#8a93f8;
+        padding: 5%;
+    }
+    
+    
+    .footer{
+        width: 100%;
+        padding: 20px;
+        background: #7a3f3f;
+    }
+
+
+
+
+}
+/* TO AVOID WIDTH SLIDING  */
+@media only screen and (max-width:1315px)
+{
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+
+
+
+/* ____________________________________________________________________________________________________________ */
+
+@media only screen and (min-width: 375px) and (max-width: 425px){
+
+    .header {
+        min-height: 100vh;
+        width: 100%;
+        background-color: #81a683;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-bottom: solid black 10px;
+      }
+    
+    /* NAVIGATION BAR */
+    .menu{
+        display: flex;
+    }
+
+    .menu:hover{
+        background-color: #556e57;
+        border-radius: 100%;
+    }
+    
+    .rLinks{
+        display: none;
+    }
+    .first_child{
+        display: none;
+    }
+    .second_child{
+        display: none;
+    }
+
+    nav h2{
+        font-size: 2vmax;
+    }
+
+    /* NAVIGATION BAR */
+
+    .HOME_ROW{
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-basis: 50%;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .HOME_COL{
+        padding: 0px;
+        margin: auto;
+        flex-basis: 50%;
+    }
+    
+    
+    
+    .HOME_COL h1{
+        color: #253728;
+        padding: 15px 0 0;
+        font-size: 13vw;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .HOME_COL p{
+        line-height: 1.5;
+        font-size: 80%;
+        margin-bottom: 10px;
+        padding-right: 0%;
+        text-align: center;
+    }
+    
+    .HOME_COL a{
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 3vw;
+        transition: 1s;
+        text-align: center;
+        display: flow;
+    }
+    
+    .HOME_COL a:hover{
+        border-radius: 10px;
+        padding: 15px;
+    }
+    
+    .image_HOME {
+       display: flex;
+    }
+    /* Button styling */
+.hButtons{
+    background-color: #25372820; /* Semi-transparent white */
+    border: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+/* Positioning the buttons within the image */
+.prev:first-of-type {
+    left: 10px; /* Left arrow */
+}
+
+.next:last-of-type {
+    right: 10px; /* Right arrow */
+}
+
+/* Hover effect */
+.prev:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+.next:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+
+    /* SECTION 2 */
+    .STEM{
+        width: 100%;
+        background-color: #7a3f3f;
+        border-bottom: #000000 solid 6px;
+        min-height: 100vh;
+        position: relative;    
+    }
+    
+    .STEM_CONTAINER{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 3%;
+        margin: auto;
+    }
+    
+    .STEM_CONTAINER_PARENT{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .STEM_CHILDREN_ROW{
+        width: 100%;
+        padding: 0px;
+        flex-basis: 50%;
+    }
+
+    
+    
+    .STEM_CHILDREN_ROW h2{
+        color: #e9f5db;
+        padding: 15px 0 0 0;
+        font-size: 38px;
+        text-align: center;
+    }
+    
+    .STEM_TEXT{
+        margin-bottom: 0px;
+        padding: 5px 0px 0px 0px;
+        font-size: 77%;
+        text-align: center;
+    }
+    
+    /* SCIENCE */
+    .card{
+        font-size: 7vw;
+        border-radius: 30px;   
+        padding: 7%;
+        text-align: center;
+    }
+    
+    .card:hover{
+        padding:10%;
+        border-radius: 35px ;
+    }
+    
+    .card:hover .card_body{
+        top: 0;
+        padding: 4%;
+    
+    }
+    
+    .card_body{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #fd8181;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    }
+    
+    /* SCIENCE */
+    
+    /* TECHNOLOGHY */
+    .tech_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 7%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .tech_card:hover{
+        padding: 10%;
+        border-radius: 45px ;
+        background-color:#f5c33e;
+    }
+    
+    .tech_card:hover .card_body_tech{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_tech{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #f5c43e;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* TECHNOLOGHY */
+    
+    /* ENGINEER */
+    .engi_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 7%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .engi_card:hover{
+        padding: 10%;
+        border-radius: 45px ;
+        background-color:#ecae6f;
+    }
+    
+    .engi_card:hover .card_body_engi{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_engi{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #ecae6f;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* ENGINEER */
+    
+    
+    /* MATHEMATICS */
+    .math_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 8%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .math_card:hover{
+        padding: 10%;
+        border-radius: 45px ;
+        background-color:#8a93f8;
+    }
+    
+    .math_card:hover .card_body_math{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_math{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #8a93f8;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* MATHEMATICS */
+    
+    .card_title{
+        font-size: 15px;  
+        padding-left: 0%;
+        
+    }
+    
+    #card_info{
+        font-size: 10px;
+        font: black;
+        padding-left: 0%;
+    }
+    /* STEM SOCIETY SECTION */
+    
+    /* features */
+    .FEATURES_STEM{
+        width: 100%;
+        margin: auto;
+        background-color: #81a683;
+        padding: 3%;
+        border-bottom: #000000 solid 6px;
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    .FEATURES_STEM_CONTAINER{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    
+    .FEATURES_STEM_CONTAINER_PARENT{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .FEATURES_STEM_CHILDREN_ROW{
+        width: 100%;
+        padding: 10px;
+        flex-basis: 50%;
+    }
+    
+    .FEATURES_STEM_CHILDREN_ROW h2{
+        color: #253728;
+        padding: 15px 0 0 15px;
+        font-size: 43px;
+        text-align: center;
+    }
+    
+    .pFeatures{
+        color: #253728;
+        margin-bottom: 0px;
+        line-height: 1.2;
+        padding: 5px 0px 0px 15px;
+        font-size: 80%;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal; 
+        text-align: center;
+    }
+    
+    .text_features{
+        background-color: antiquewhite;
+        margin: 0px 0px 10px 0px;
+        padding: 7%;
+        font-size: 10vw;
+        border-radius: 40px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        text-align: center;
+        
+    }
+    
+    #SCIENCE:hover{
+        background-color:#fd8181;
+        padding: 5%;
+    }
+    
+    #TECHNOLOGHY:hover{
+        background-color:#f5c33e;
+        padding: 5%;
+    }
+    #ENGINEERING:hover{
+        background-color:#ecae6f;
+        padding: 5%;
+    }
+    
+    #MATHEMATHICS:hover{
+        background-color:#8a93f8;
+        padding: 5%;
+    }
+    
+    
+    .footer{
+        width: 100%;
+        padding: 20px;
+        background: #7a3f3f;
+    }
+
+
+
+
+}
+
+
+/*  */
+
+
+/* ____________________________________________________________________________________________________________ */
+
+@media only screen and (min-width: 425px) and (max-width: 768px){
+
+    .header {
+        min-height: 100vh;
+        width: 100%;
+        background-color: #81a683;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-bottom: solid black 10px;
+      }
+    
+    /* NAVIGATION BAR */
+    .menu{
+        display: flex;
+    }
+
+    .menu:hover{
+        background-color: #556e57;
+        border-radius: 100%;
+    }
+    
+    .rLinks{
+        display: none;
+    }
+    .first_child{
+        display: none;
+    }
+    .second_child{
+        display: none;
+    }
+
+    nav h2{
+        font-size: 2vmax;
+    }
+
+    /* NAVIGATION BAR */
+
+    .HOME_ROW{
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-basis: 50%;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .HOME_COL{
+        padding: 0px;
+        margin: auto;
+        flex-basis: 50%;
+    }
+    
+    
+    
+    .HOME_COL h1{
+        color: #253728;
+        padding: 15px 0 0;
+        font-size: 13vw;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .HOME_COL p{
+        line-height: 1.5;
+        font-size: 80%;
+        margin-bottom: 10px;
+        padding-right: 0%;
+        text-align: center;
+    }
+    
+    .HOME_COL a{
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 3vw;
+        transition: 1s;
+        text-align: center;
+        display: flow;
+    }
+    
+    .HOME_COL a:hover{
+        border-radius: 10px;
+        padding: 15px;
+    }
+    
+    .image_HOME {
+       display: flex;
+    }
+    /* Button styling */
+.hButtons{
+    background-color: #25372820; /* Semi-transparent white */
+    border: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+/* Positioning the buttons within the image */
+.prev:first-of-type {
+    left: 10px; /* Left arrow */
+}
+
+.next:last-of-type {
+    right: 10px; /* Right arrow */
+}
+
+/* Hover effect */
+.prev:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+.next:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+
+    /* SECTION 2 */
+    .STEM{
+        width: 100%;
+        background-color: #7a3f3f;
+        border-bottom: #000000 solid 6px;
+        min-height: 100vh;
+        position: relative;    
+    }
+    
+    .STEM_CONTAINER{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 3%;
+        margin: auto;
+    }
+    
+    .STEM_CONTAINER_PARENT{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .STEM_CHILDREN_ROW{
+        width: 100%;
+        padding: 0px;
+        flex-basis: 50%;
+    }
+
+    
+    
+    .STEM_CHILDREN_ROW h2{
+        color: #e9f5db;
+        padding: 15px 0 0 0;
+        font-size: 38px;
+        text-align: center;
+    }
+    
+    .STEM_TEXT{
+        margin-bottom: 0px;
+        padding: 5px 0px 0px 0px;
+        font-size: 77%;
+        text-align: center;
+    }
+    
+    /* SCIENCE */
+    .card{
+        font-size: 7vw;
+        border-radius: 30px;   
+        padding: 7%;
+        text-align: center;
+    }
+    
+    .card:hover{
+        padding:10%;
+        border-radius: 35px ;
+    }
+    
+    .card:hover .card_body{
+        top: 0;
+        padding: 4%;
+    
+    }
+    
+    .card_body{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #fd8181;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    }
+    
+    /* SCIENCE */
+    
+    /* TECHNOLOGHY */
+    .tech_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 7%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .tech_card:hover{
+        padding: 10%;
+        border-radius: 45px ;
+        background-color:#f5c33e;
+    }
+    
+    .tech_card:hover .card_body_tech{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_tech{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #f5c43e;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* TECHNOLOGHY */
+    
+    /* ENGINEER */
+    .engi_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 7%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .engi_card:hover{
+        padding: 10%;
+        border-radius: 45px ;
+        background-color:#ecae6f;
+    }
+    
+    .engi_card:hover .card_body_engi{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_engi{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #ecae6f;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* ENGINEER */
+    
+    
+    /* MATHEMATICS */
+    .math_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 8%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .math_card:hover{
+        padding: 10%;
+        border-radius: 45px ;
+        background-color:#8a93f8;
+    }
+    
+    .math_card:hover .card_body_math{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_math{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #8a93f8;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* MATHEMATICS */
+    
+    .card_title{
+        font-size: 15px;  
+        
+    }
+    
+    #card_info{
+        font-size: 10px;
+        font: black;
+        padding-left: 3%;
+    }
+    /* STEM SOCIETY SECTION */
+    
+    /* features */
+    .FEATURES_STEM{
+        width: 100%;
+        margin: auto;
+        background-color: #81a683;
+        padding: 3%;
+        border-bottom: #000000 solid 6px;
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    .FEATURES_STEM_CONTAINER{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    
+    .FEATURES_STEM_CONTAINER_PARENT{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .FEATURES_STEM_CHILDREN_ROW{
+        width: 100%;
+        padding: 10px;
+        flex-basis: 50%;
+    }
+    
+    .FEATURES_STEM_CHILDREN_ROW h2{
+        color: #253728;
+        padding: 15px 0 0 15px;
+        font-size: 43px;
+        text-align: center;
+    }
+    
+    .pFeatures{
+        color: #253728;
+        margin-bottom: 0px;
+        line-height: 1.2;
+        padding: 5px 0px 0px 15px;
+        font-size: 80%;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal; 
+        text-align: center;
+    }
+    
+    .text_features{
+        background-color: antiquewhite;
+        margin: 0px 0px 10px 0px;
+        padding: 7%;
+        font-size: 10vw;
+        border-radius: 40px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        text-align: center;
+        
+    }
+    
+    #SCIENCE:hover{
+        background-color:#fd8181;
+        padding: 5%;
+    }
+    
+    #TECHNOLOGHY:hover{
+        background-color:#f5c33e;
+        padding: 5%;
+    }
+    #ENGINEERING:hover{
+        background-color:#ecae6f;
+        padding: 5%;
+    }
+    
+    #MATHEMATHICS:hover{
+        background-color:#8a93f8;
+        padding: 5%;
+    }
+    
+    
+    .footer{
+        width: 100%;
+        padding: 20px;
+        background: #7a3f3f;
+    }
+
+
+
+
+}
+
+
+/*  */
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    .header {
+        min-height: 100vh;
+        width: 100%;
+        background-color: #81a683;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-bottom: solid black 10px;
+      }
+    
+    /* NAVIGATION BAR */
+    .menu{
+        display: flex;
+    }
+
+    .menu:hover{
+        background-color: #556e57;
+        border-radius: 100%;
+    }
+    
+    .rLinks{
+        display: none;
+    }
+    .first_child{
+        display: none;
+    }
+    .second_child{
+        display: none;
+    }
+
+    nav h2{
+        font-size: 2vmax;
+    }
+
+    /* NAVIGATION BAR */
+
+    .HOME_ROW{
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-basis: 50%;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .HOME_COL{
+        padding: 0px;
+        margin: auto;
+        flex-basis: 50%;
+    }
+    
+    
+    
+    .HOME_COL h1{
+        color: #253728;
+        padding: 15px 0 0;
+        font-size: 13vw;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .HOME_COL p{
+        line-height: 1.5;
+        font-size: 2.5vw;
+        margin-bottom: 10px;
+        padding-right: 0%;
+        text-align: center;
+    }
+    
+    .HOME_COL a{
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 3vw;
+        transition: 1s;
+        text-align: center;
+        display: flow;
+    }
+    
+    .HOME_COL a:hover{
+        border-radius: 10px;
+        padding: 15px;
+    }
+    
+    .image_HOME {
+       display: flex;
+    }
+    /* Button styling */
+.hButtons{
+    background-color: #25372820; /* Semi-transparent white */
+    border: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+/* Positioning the buttons within the image */
+.prev:first-of-type {
+    left: 10px; /* Left arrow */
+}
+
+.next:last-of-type {
+    right: 10px; /* Right arrow */
+}
+
+/* Hover effect */
+.prev:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+.next:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+
+    /* SECTION 2 */
+    .STEM{
+        width: 100%;
+        background-color: #7a3f3f;
+        border-bottom: #000000 solid 6px;
+        min-height: 100vh;
+        position: relative;    
+    }
+    
+    .STEM_CONTAINER{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 3%;
+        margin: auto;
+    }
+    
+    .STEM_CONTAINER_PARENT{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .STEM_CHILDREN_ROW{
+        width: 100%;
+        padding: 0px;
+        flex-basis: 50%;
+    }
+
+    
+    
+    .STEM_CHILDREN_ROW h2{
+        color: #e9f5db;
+        padding: 10% 0 0 0;
+        font-size: 8vw;
+        text-align: center;
+        margin-top: 25%;
+    }
+    
+    .STEM_TEXT{
+        margin-bottom: 0px;
+        padding: 5px 0px 0px 0px;
+        font-size: 3vw;
+        text-align: center;
+    }
+    
+    /* SCIENCE */
+    .card{
+        font-size: 7vw;
+        border-radius: 30px;   
+        padding: 5%;
+        text-align: center;
+    }
+    
+    .card:hover{
+        padding:7%;
+        border-radius: 35px ;
+    }
+    
+    .card:hover .card_body{
+        top: 0;
+        padding: 4%;
+    
+    }
+    
+    .card_body{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #fd8181;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    }
+    
+    /* SCIENCE */
+    
+    /* TECHNOLOGHY */
+    .tech_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 5%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .tech_card:hover{
+        padding: 7%;
+        border-radius: 45px ;
+        background-color:#f5c33e;
+    }
+    
+    .tech_card:hover .card_body_tech{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_tech{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #f5c43e;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* TECHNOLOGHY */
+    
+    /* ENGINEER */
+    .engi_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 5%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .engi_card:hover{
+        padding: 7%;
+        border-radius: 45px ;
+        background-color:#ecae6f;
+    }
+    
+    .engi_card:hover .card_body_engi{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_engi{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #ecae6f;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* ENGINEER */
+    
+    
+    /* MATHEMATICS */
+    .math_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 5%;
+        font-size: 7vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+        margin-bottom: 35%;
+    }
+    
+    .math_card:hover{
+        padding: 7%;
+        border-radius: 45px ;
+        background-color:#8a93f8;
+    }
+    
+    .math_card:hover .card_body_math{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_math{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #8a93f8;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+
+    
+    }
+    /* MATHEMATICS */
+    
+    .card_title{
+        font-size: 4vw;  
+        text-align: center;
+    }
+    
+    #card_info{
+        font-size: 3vw;
+        font: black;
+        text-align: center;
+    }
+    /* STEM SOCIETY SECTION */
+    
+    /* features */
+    .FEATURES_STEM{
+        width: 100%;
+        margin: auto;
+        background-color: #81a683;
+        padding: 3%;
+        border-bottom: #000000 solid 6px;
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    .FEATURES_STEM_CONTAINER{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    
+    .FEATURES_STEM_CONTAINER_PARENT{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .FEATURES_STEM_CHILDREN_ROW{
+        width: 100%;
+        padding: 10px;
+        flex-basis: 50%;
+    }
+    
+    .FEATURES_STEM_CHILDREN_ROW h2{
+        color: #253728;
+        padding: 15px 0 0 15px;
+        font-size: 10vw;
+        text-align: center;
+    }
+    
+    .pFeatures{
+        color: #253728;
+        margin-bottom: 0px;
+        line-height: 1.2;
+        padding: 5px 0px 0px 15px;
+        font-size: 3vw;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal; 
+        text-align: center;
+    }
+    
+    .text_features{
+        background-color: antiquewhite;
+        margin: 0px 0px 10px 0px;
+        padding: 5%;
+        font-size: 7vw;
+        border-radius: 40px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        text-align: center;
+        margin: 0% 3% 2% 3%;
+        
+    }
+    
+    #SCIENCE:hover{
+        background-color:#fd8181;
+        padding: 6%;
+    }
+    
+    #TECHNOLOGHY:hover{
+        background-color:#f5c33e;
+        padding: 6%;
+    }
+    #ENGINEERING:hover{
+        background-color:#ecae6f;
+        padding: 6%;
+    }
+    
+    #MATHEMATHICS:hover{
+        background-color:#8a93f8;
+        padding: 6%;
+    }
+    
+    
+    .footer{
+        width: 100%;
+        padding: 20px;
+        background: #7a3f3f;
+    }
+
+
+
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .header {
+        min-height: 100vh;
+        width: 100%;
+        background-color: #81a683;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-bottom: solid black 10px;
+      }
+    
+    /* NAVIGATION BAR */
+    .menu{
+        display: none;
+    }
+
+    .menu:hover{
+        background-color: #556e57;
+        border-radius: 100%;
+    }
+    
+    .rLinks{
+        display: flex;
+        font-size: 20%;
+    }
+    .first_child{
+        display: none;
+    }
+    .second_child{
+        display: none;
+    }
+
+    nav h2{
+        font-size: 2vmax;
+    }
+
+    /* NAVIGATION BAR */
+
+    .HOME_ROW{
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: row;
+        flex-basis: 50%;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .HOME_COL{
+        padding: 0px;
+        margin: auto;
+        flex-basis: 50%;
+    }
+    
+    
+    
+    .HOME_COL h1{
+        color: #253728;
+        padding: 15px 0 0;
+        font-size: 6vw;
+        line-height: 1;
+    }
+    
+    .HOME_COL p{
+        line-height: 1.5;
+        font-size: 1.5vw;
+        margin-bottom: 20px;
+        padding-right: 2%;
+    }
+    
+    .HOME_COL a{
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 1.5vw;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .HOME_COL a:hover{
+        border-radius: 10px;
+        padding: 15px;
+    }
+    
+    .image_HOME {
+       display: flex;
+    }
+    /* Button styling */
+.hButtons{
+    background-color: #25372820; /* Semi-transparent white */
+    border: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+/* Positioning the buttons within the image */
+.prev:first-of-type {
+    left: 10px; /* Left arrow */
+}
+
+.next:last-of-type {
+    right: 10px; /* Right arrow */
+}
+
+/* Hover effect */
+.prev:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+.next:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
+
+    /* SECTION 2 */
+    .STEM{
+        width: 100%;
+        background-color: #7a3f3f;
+        border-bottom: #000000 solid 6px;
+        min-height: 100vh;
+        position: relative;    
+    }
+    
+    .STEM_CONTAINER{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 3%;
+        margin: auto;
+    }
+    
+    .STEM_CONTAINER_PARENT{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .STEM_CHILDREN_ROW{
+        width: 100%;
+        padding: 0px;
+        flex-basis: 50%;
+    }
+
+    
+    
+    .STEM_CHILDREN_ROW h2{
+        color: #e9f5db;
+        padding: 0% 0 0 0;
+        font-size: 8vw;
+       
+        margin-top: 0%;
+    }
+    
+    .STEM_TEXT{
+        margin-bottom: 0px;
+        padding: 5px 0px 0px 0px;
+        font-size: 2vw;
+    }
+    
+    /* SCIENCE */
+    .card{
+        font-size: 3vw;
+        border-radius: 30px;   
+        padding: 5%;
+        text-align: center;
+    }
+    
+    .card:hover{
+        padding:7%;
+        border-radius: 35px ;
+    }
+    
+    .card:hover .card_body{
+        top: 0;
+        padding: 4%;
+    
+    }
+    
+    .card_body{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #fd8181;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    }
+    
+    /* SCIENCE */
+    
+    /* TECHNOLOGHY */
+    .tech_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 5%;
+        font-size: 3vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .tech_card:hover{
+        padding: 7%;
+        border-radius: 45px ;
+        background-color:#f5c33e;
+    }
+    
+    .tech_card:hover .card_body_tech{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_tech{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #f5c43e;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* TECHNOLOGHY */
+    
+    /* ENGINEER */
+    .engi_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 5%;
+        font-size: 3vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    .engi_card:hover{
+        padding: 7%;
+        border-radius: 45px ;
+        background-color:#ecae6f;
+    }
+    
+    .engi_card:hover .card_body_engi{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_engi{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #ecae6f;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+    
+    }
+    /* ENGINEER */
+    
+    
+    /* MATHEMATICS */
+    .math_card{
+        background-color: antiquewhite;
+        margin: 15px;
+        padding: 5%;
+        font-size: 3vw;
+        border-radius: 30px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        text-align: center;
+        margin-bottom: 0%;
+    }
+    
+    .math_card:hover{
+        padding: 7%;
+        border-radius: 45px ;
+        background-color:#8a93f8;
+    }
+    
+    .math_card:hover .card_body_math{
+        top: 0;
+        padding: 4%;
+    }
+    
+    .card_body_math{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        top:-100%;
+        right: 0%;
+        position:absolute;
+        background: #8a93f8;
+        backdrop-filter: blur(5px) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        transition: 2s;
+        padding: 0%;
+
+    
+    }
+    /* MATHEMATICS */
+    
+    .card_title{
+        font-size: 75%;  
+        text-align: center;
+    }
+    
+    #card_info{
+        font-size: 50%;
+        font: black;
+        text-align: center;
+    }
+    /* STEM SOCIETY SECTION */
+    
+    /* features */
+    .FEATURES_STEM{
+        width: 100%;
+        margin: auto;
+        background-color: #81a683;
+        padding: 3%;
+        border-bottom: #000000 solid 6px;
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    .FEATURES_STEM_CONTAINER{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+    
+    .FEATURES_STEM_CONTAINER_PARENT{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .FEATURES_STEM_CHILDREN_ROW{
+        width: 100%;
+        padding: 10px;
+        flex-basis: 50%;
+    }
+    
+    .FEATURES_STEM_CHILDREN_ROW h2{
+        color: #253728;
+        padding: 15px 0 0 15px;
+        font-size: 8vw;
+    }
+    
+    .pFeatures{
+        color: #253728;
+        margin-bottom: 0px;
+        line-height: 1.2;
+        padding: 5px 0px 0px 15px;
+        font-size: 2vw;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal; 
+       
+    }
+    
+    .text_features{
+        background-color: antiquewhite;
+        margin: 0px 0px 10px 0px;
+        padding: 5%;
+        font-size: 3vw;
+        border-radius: 40px;
+        border: #000000 solid 2px;
+        transition: 1s;
+        text-align: center;
+        /* margin: 0% 3% 2% 3%; */
+        
+    }
+    
+    #SCIENCE:hover{
+        background-color:#fd8181;
+        padding: 6%;
+    }
+    
+    #TECHNOLOGHY:hover{
+        background-color:#f5c33e;
+        padding: 6%;
+    }
+    #ENGINEERING:hover{
+        background-color:#ecae6f;
+        padding: 6%;
+    }
+    
+    #MATHEMATHICS:hover{
+        background-color:#8a93f8;
+        padding: 6%;
+    }
+    
+    
+    .footer{
+        width: 100%;
+        padding: 20px;
+        background: #7a3f3f;
+    }
+
+
+
+
+}
+
+
+/* TO AVOID WIDTH SLIDING  */
+@media only screen and (max-width:1315px)
+{
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+/* TO AVOID WIDTH SLIDING  */
+
+@media only screen and (max-width:1024px)
+{
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width:2560px)
+{
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+/* TO AVOID WIDTH SLIDING  */
+
+
+
+
+
+  
+  
